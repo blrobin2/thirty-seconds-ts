@@ -300,7 +300,7 @@ const sortedDirection = (arr: number[]): number => {
       if (!direction) {
         return 0;
       }
-      return direction > 0 ? direction / direction : direction / -direction;
+      return direction > 0 ? 1 : direction / -direction;
     } else if ((val - arr[i + 1]) * direction > 0) {
       return 0;
     }
@@ -837,7 +837,7 @@ const shittyAdd = (a?: number, b?: number, c?: number): string | number => {
     if (typeof thing === "number") {
       thing += b;
     } else {
-      thing += b;
+      thing += b.toString();
     }
   } else {
     thing += "b";
@@ -846,7 +846,7 @@ const shittyAdd = (a?: number, b?: number, c?: number): string | number => {
     if (typeof thing === "number") {
       thing += c;
     } else {
-      thing += c;
+      thing += c.toString();
     }
   } else {
     thing += "c";
